@@ -1,0 +1,106 @@
+
+.picture-insurance-layout{
+    @media(min-width : 600px){
+        padding-left: 10%;
+        padding-right: 10%;
+        position: relative;
+        display: flex;
+        background-color: var(--dark);
+        height: 600px;
+    }
+
+    section.picture{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        @media(min-width : 600px){
+            display: flex;
+            align-items: end;
+            order: 2;
+            transform: translateY(15%);
+            picture img{
+                min-width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    section.insurance{
+        background-color: var(--dark);
+        color: white;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+
+        @media(min-width : 600px){
+            display: flex;
+            text-align: start;
+            background-color: transparent;
+            width: 50%;
+            order: 1;
+        }
+
+        
+    
+    
+        .insurance-layout{
+            margin: 5.8rem 1.5rem 5.8rem 1.5rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+            font-family: var(--font-text);
+            position: relative;
+
+            @media(min-width : 600px){
+                text-align: start;
+                align-items: flex-start;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 30%;
+                    height: 1px;
+                    background-color: white;
+                }
+            }
+    
+    
+    
+            h1{
+                font-family: var(--font-title);
+                line-height: 3rem;
+                font-size: 3rem;
+                letter-spacing: -0.67px;
+                font-weight: 400;
+            }
+            p{
+                font-size: 1rem;
+                line-height: 1.625rem;
+                font-weight: 400;
+            }
+            a{
+                margin-top: 1rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                outline: 1.5px solid white;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-weight: 700;
+                font-size: 13px;
+            }
+        }
+    
+    }
+}

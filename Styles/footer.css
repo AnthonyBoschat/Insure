@@ -1,0 +1,90 @@
+footer{
+    margin-top: 8.75rem;
+    text-transform: uppercase;
+    font-family: var(--font-text);
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    padding-bottom: 5.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    @media(min-width:600px){
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .footer-layout{
+
+        @media(min-width:600px){
+            div.insure-media{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                picture{
+                    margin-top: 0;
+                }
+                .media-layout{
+                    margin-top: 0;
+                }
+            }
+        }
+
+        picture{
+            margin-top: 5.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .media-layout{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .separator{
+            height: 1px;
+            background-color: #DADADA;
+            margin-top: 2.5rem;
+        }
+
+        .footer-part-layout{
+            font-weight: 700;
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.25rem;
+            @media(min-width:600px){
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .footer-part{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2.25rem;
+                @media(min-width:600px){
+                    align-items: flex-start;
+                }
+
+                > span{
+                    color: #837D88;
+                }
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    @media(min-width:600px){
+                        gap: 1rem;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+
+    }
+}
