@@ -46,5 +46,10 @@ section.find-more{
         letter-spacing: 1.5px;
         font-weight: 700;
         font-size: 13px;
+        transition: all 0.1s linear;
+        &:hover{
+            background-color: white;
+            color: var(--darker);
+        }
     }
 }
