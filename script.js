@@ -1,6 +1,6 @@
 const menuButton = document.querySelector(".hamburger")
 const phoneMenu = document.querySelector(".phoneMenu")
-const svgLogo = document.querySelector("#group")
+
 
 
 const buttonIcons = {
@@ -24,11 +24,12 @@ const buttonIcons = {
             </g>`
 }
     
-
-
-
 const actionMenu = () => {
     if(!phoneMenu.classList.contains("animationClass_open")){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Ajoute un effet de défilement en douceur
+        });
         menuButton.innerHTML = buttonIcons.close
         phoneMenu.classList.add("animationClass_open")
         phoneMenu.classList.remove("animationClass_closed")
@@ -53,9 +54,36 @@ const actionMenu = () => {
     }
 }
 
-
-
 menuButton.addEventListener("click", actionMenu, true)
 
-// body = overflow hidden
-// Ajouter class open et retirer class closed à openMenu
+
+document.addEventListener("DOMContentLoaded", () => {
+    const paths = document.querySelectorAll(".path");
+    const svg = document.querySelector(".svg");
+
+    // Fonction pour animer les propriétés
+    const animatePaths = (path) => {
+        let duration = Math.random() * 40 ; // Durée entre 40 et 80
+        let scaleY = Math.random() * (2 - 0.6) + 0.6; // Échelle Y entre 0.6 et 2
+        let scaleX = Math.random() * (2.5 - 1.5) + 1.5; // Échelle X entre 1.5 et 2.5
+        let y = Math.random() * 252 - 250; // Valeur Y entre -250 et 250
+        let rotate = Math.random() * 40 - 20; // Rotation entre -20 et 20 degrés
+
+        // Animation des propriétés
+        path.animate([
+            { transform: `translateY(${y}px) rotate(${rotate}deg) scaleX(2) scaleY(1.2)`, opacity: 0.75 },
+            { transform: `translateY(${-y}px) rotate(${-rotate}deg) scaleX(1.5) scaleY(0.6)`, opacity: 1 }
+        ], {
+            duration: duration * 1000, // Convertir en millisecondes
+            easing: "ease-in-out",
+            iterations: Infinity,
+            direction: 'alternate'
+        });
+    };
+
+    // Appliquer l'animation à chaque chemin
+    paths.forEach(animatePaths);
+
+    // Rendre le SVG visible
+    svg.style.opacity = 0.4;
+});
