@@ -3,4 +3,18 @@ body{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 1fr;
+
+    &.visible{
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    &.hidden{
+        overflow: hidden;
+    }
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
 }
