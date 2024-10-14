@@ -9,9 +9,8 @@ header{
     background-color: white;
     gap: 2rem;
     @media(min-width:600px){
-        margin-left: 10%;
-        margin-right: 10%;
-        padding-right: 0;
+        padding-left: calc(10% + 1.5rem);
+        padding-right: 10%;
     } 
     
     nav{

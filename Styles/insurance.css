@@ -2,6 +2,8 @@
 .picture-insurance-layout{
     display: flex;
     flex-direction: column;
+    position: relative;
+    /* overflow: hidden; */
     @media(min-width : 600px){
         padding-left: 10%;
         padding-right: 10%;
@@ -12,26 +14,46 @@
         background-color: var(--dark);
         height: 600px;
     }
-    
 
-    svg{
-        display: none;
-        @media(min-width:600px){
-            display: block;
+    @media(min-width:600px){
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-position: top right;
+            background-position-y: -5rem;
+            background-repeat: no-repeat;
+            background-image: url("/Assets/Backgrounds/InsuranceBackgroundDesktopRight.png");
         }
-        width: fit-content;
-        fill: white;
-        opacity: 0.3;
-        position: absolute;
-        right: 5rem;
-        transform: rotate(-110deg);
-        width: 130%;
-        height: 80%;
+        &::before{
+            content: "";
+            position: absolute;
+            z-index: 1000;
+            transform: translateY(70%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-image: url("/Assets/Backgrounds/InsuranceBackgroundDesktopLeft.png");
+        }
     }
+
 
     div.picture{
         position: relative;
+        z-index: 2;
         order: 1;
+        picture{
+            position: relative;
+            z-index: 2000;
+        }
         img{
             width: 100%;
         }
@@ -39,10 +61,8 @@
             margin-top: 6.5rem;
             width: 50%;
             order: 2;
-            picture img{
-                max-width: 540px;
-                max-height: 650px;
-            }
+            max-width: 540px;
+            max-height: 650px;
         }
     }
 
@@ -52,31 +72,44 @@
         color: white;
         display: flex;
         justify-content: center;
-        background-size: cover;
         order: 2;
-        svg{
-            width: fit-content;
-            fill: white;
-            opacity: 0.3;
-            position: absolute;
-            /* z-index: -1; */
-            right: -5rem;
-            /* padding: 10rem; */
-            transform: rotate(-45deg);
-            width: 100%;
-            height: 100%;
-        }
 
+        @media(max-width : 600px){
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: auto;
+                background-position: top left;
+                transform: translateY(-50%);
+                margin-bottom: 5rem;
+                background-repeat: no-repeat;
+                background-image: url("/Assets/Backgrounds/insuranceBackgroundMobileLeft.svg");
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: auto;
+                background-position: bottom right;
+                transform: translateY(37%);
+                background-repeat: no-repeat;
+                background-image: url("/Assets/Backgrounds/insuranceBackgroundMobileRight.png");
+            }
+        }
+        
         @media(min-width : 600px){
             display: flex;
             text-align: start;
-            background-color: transparent;
             width: 50%;
-            order: 1;
+            
         }
-
-        
-    
     
         .insurance-layout{
             margin: 6.5rem 1.5rem 6.5rem 1.5rem;
@@ -89,6 +122,7 @@
             text-align: center;
             font-family: var(--font-text);
             position: relative;
+
 
             @media(min-width : 600px){
                 text-align: start;
