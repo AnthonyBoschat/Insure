@@ -14,10 +14,6 @@ nav.phoneMenu{
         display: none;
     }
 
-    &.animationClass_close{
-        animation: phoneMenuDisparition 0.3s linear forwards;
-    }
-
     &.animationClass_open{
         background: url("../Assets/Backgrounds/navigationBackground.png");
         background-repeat: no-repeat;
@@ -30,7 +26,9 @@ nav.phoneMenu{
         overflow: hidden;
     }
 
-    
+    &.animationClass_close{
+        animation: phoneMenuDisparition 0.3s linear forwards;
+    }
 
     a{
         display: flex;
@@ -46,10 +44,10 @@ nav.phoneMenu{
             outline: 1.5px solid white;
         }
 
-        /* lmao */
         &:active, &:focus, &:target, &:enabled, &:visited{
             outline: 1px solid white;
             background-color: rgba(255, 255, 255, 0.197);
+            
         }
     }
 }

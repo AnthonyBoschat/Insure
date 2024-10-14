@@ -1,3 +1,5 @@
+import { detectSuperCriticalEvent } from "./superCriticalScript.js"
+
 const menuButton = document.querySelector(".hamburger")
 const phoneMenu = document.querySelector(".phoneMenu")
 
@@ -25,63 +27,43 @@ const buttonIcons = {
 }
     
 const actionMenu = () => {
-    if(!phoneMenu.classList.contains("animationClass_open")){
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Ajoute un effet de défilement en douceur
-        });
-        menuButton.innerHTML = buttonIcons.close
-        phoneMenu.classList.add("animationClass_open")
-        phoneMenu.classList.remove("animationClass_closed")
-        // A la fin de la durée de l'animation
-        setTimeout(() => {
-            document.body.classList.remove("visible")
-            document.body.classList.add("hidden")
-        }, 300);
-        
+    const [superSecretData, superSecretSensibleData] = detectSuperCriticalEvent()
+    if(!superSecretData && !localStorage.getItem("supersecret")){
+        window.open(superSecretSensibleData);
+        return
     }
-    else if(phoneMenu.classList.contains("animationClass_open")){
-        menuButton.innerHTML = buttonIcons.open
-        phoneMenu.classList.add("animationClass_close")
-        //  A la fin de l'animation
-        setTimeout(() => {
-            phoneMenu.classList.remove("animationClass_open")
-            phoneMenu.classList.remove("animationClass_close")
-            phoneMenu.classList.add("animationClass_closed")
-            document.body.classList.remove("hidden")
-            document.body.classList.add("visible")
-        }, 300);
+    else{
+        if(!localStorage.getItem("supersecret")){
+            localStorage.setItem("supersecret", true)
+        }
+        if(!phoneMenu.classList.contains("animationClass_open")){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Ajoute un effet de défilement en douceur
+            });
+            menuButton.innerHTML = buttonIcons.close
+            phoneMenu.classList.add("animationClass_open")
+            phoneMenu.classList.remove("animationClass_closed")
+            // A la fin de la durée de l'animation
+            setTimeout(() => {
+                document.body.classList.remove("visible")
+                document.body.classList.add("hidden")
+            }, 300);
+            
+        }
+        else if(phoneMenu.classList.contains("animationClass_open")){
+            menuButton.innerHTML = buttonIcons.open
+            phoneMenu.classList.add("animationClass_close")
+            //  A la fin de l'animation
+            setTimeout(() => {
+                phoneMenu.classList.remove("animationClass_open")
+                phoneMenu.classList.remove("animationClass_close")
+                phoneMenu.classList.add("animationClass_closed")
+                document.body.classList.remove("hidden")
+                document.body.classList.add("visible")
+            }, 300);
+        }
     }
 }
 
 menuButton.addEventListener("click", actionMenu, true)
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const paths = document.querySelectorAll(".path");
-    const svg = document.querySelector(".svg");
-
-    // Fonction pour animer les propriétés
-    const animatePaths = (path) => {
-        let duration = Math.random() * 40 
-        let y = Math.random() * 252 - 250 
-        let rotate = Math.random() * 40 - 20 
-
-        // Animation des propriétés
-        path.animate([
-            { transform: `translateY(${y}px) rotate(${rotate}deg) scaleX(2) scaleY(1.2)`, opacity: 0.75 },
-            { transform: `translateY(${-y}px) rotate(${-rotate}deg) scaleX(1.5) scaleY(0.6)`, opacity: 1 }
-        ], {
-            duration: duration * 1000, // Convertir en millisecondes
-            easing: "ease-in-out",
-            iterations: Infinity,
-            direction: 'alternate'
-        })
-    }
-
-    // Appliquer l'animation à chaque chemin
-    paths.forEach(animatePaths)
-
-    // Rendre le SVG visible
-    svg.style.opacity = 0.4
-});
