@@ -3,7 +3,7 @@ nav.phoneMenu{
     position: absolute;
     height: 100vh;
     width: 100vw;
-    /* background-color: red; */
+    background-color: red;
     z-index: 1001;
     
     padding-left: 1.5rem;
@@ -15,13 +15,15 @@ nav.phoneMenu{
     }
 
     &.animationClass_open{
-        background: url("../Assets/Backgrounds/phoneMenuBackground.png");
+        background: url("../Assets/Backgrounds/navigationBackground.png");
         background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
         animation: phoneMenuApparition 0.3s linear forwards;
+        overflow: hidden;
     }
 
     &.animationClass_close{
