@@ -1,32 +1,45 @@
-section.find-more{
+section.find-out{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-top: 8.75rem;
     padding:4.5rem  1.5rem 4.5rem   1.5rem;
     background-color: var(--dark);
-    object-fit: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     position: relative;
-    overflow: hidden;
-    z-index: 1;
     background-image: url("/Assets/Backgrounds/findOutBackgroundMobile.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top right;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position-x: 50vw;
+    background-position-y: 50%;
 
 
     @media(min-width:600px){
+        background-image: none;
         flex-direction: row;
         justify-content: space-between;
         padding-left: 5rem;
         padding-right: 5rem;
         margin-left: 10%;
         margin-right: 10%;
-        background-image: url("/Assets/Backgrounds/findOutBackgroundDesktop.png");
-        background-size: auto;
+        
+
+        &::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("/Assets/Backgrounds/findOutBackgroundDesktop.png");
+            background-size: auto;
+            background-attachment: fixed;
+            background-position-x: 60vw;
+            background-repeat: no-repeat;
+        }
     }
 
     h1{
