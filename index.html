@@ -29,6 +29,7 @@
     
     <!-- HEADER -->
     <header>
+            
         <div class="logo">
             <picture>
                 <img src="Assets/Icons/logo.png" alt="Logo de l'entreprise 'Insure'">
@@ -61,7 +62,25 @@
 
     <main>
         <!-- INSURANCE -->
-        <div class="picture-insurance-layout">
+        <section class="picture-insurance-layout">
+            
+            <div class="insurance">
+                <div class="insurance-layout">
+                    <h1>Humanizing your insurance.</h1>
+                    <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
+                    <a href="#">View plans</a>
+                </div>
+            </div>
+
+            <div class="picture">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="Assets/Backgrounds/insuranceBackgroundPhone.jpg">
+                    <source media="(min-width: 600px)" srcset="Assets/Backgrounds/insuranceBackgroundDesktop.jpg">
+                    <img src="Assets/Backgrounds/insuranceBackgroundDesktop.jpg" alt="Une image de quatres personnes, deux adultes et deux enfants, qui se tiennent la main. Symbolise l'importance de l'humain pour l'entreprise Insure.">
+                </picture>
+            </div>
+        
+
             <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none">
                 <defs />
                 <linearGradient id="SVGID_1_" x1="2880" x2="2880" y1="909.66" y2="170.6" gradientUnits="userSpaceOnUse">
@@ -104,25 +123,7 @@
                   </g>
                 </g>
               </svg>
-
-            <section class="picture">
-                <picture>
-                    <source media="(max-width: 600px)" srcset="Assets/Backgrounds/insuranceBackgroundPhone.jpg">
-                    <source media="(min-width: 600px)" srcset="Assets/Backgrounds/insuranceBackgroundDesktop.jpg">
-                    <img src="Assets/Backgrounds/insuranceBackgroundDesktop.jpg" alt="">
-                </picture>
-            </section>
-        
-            <section class="insurance">
-                <div class="insurance-layout">
-                    <h1>Humanizing your insurance.</h1>
-                    <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
-                    <a href="#">View plans</a>
-                </div>
-
-                
-            </section>
-        </div>
+        </section>
     
         <!-- DIFFERENT -->
         <section class="different">
@@ -132,7 +133,7 @@
 
                 <div class="part">
                     <picture>
-                        <img src="Assets/Icons/eclair.png" alt="">
+                        <img src="Assets/Icons/eclair.png" alt="Icône d'éclair. Symbolise la rapidité de leurs procédures">
                     </picture>
                     <h2>Snappy Process</h2>
                     <p>Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.</p>
@@ -140,7 +141,7 @@
 
                 <div class="part">
                     <picture>
-                        <img src="Assets/Icons/price.png" alt="">
+                        <img src="Assets/Icons/price.png" alt="Icône de dollard. Symbolise des prix abordables.">
                     </picture>
                     <h2>Affordable Prices</h2>
                     <p>We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible.</p>
@@ -148,7 +149,7 @@
 
                 <div class="part">
                     <picture>
-                        <img src="Assets/Icons/people.png" alt="">
+                        <img src="Assets/Icons/people.png" alt="Icône d'une silhouette. Symbolise le fait que l'entreprise Insure est tourner vers l'humain.">
                     </picture>
                     <h2>People First</h2>
                     <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.</p>
@@ -215,7 +216,7 @@
     <footer>
         <div class="footer-layout">
 
-            <div class="insure-media">
+            <section class="insure-media">
                 <picture>
                     <img src="Assets/Icons/logo.png" alt="Logo de l'entreprise 'Insure'">
                 </picture>
@@ -254,44 +255,72 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <div class="separator"></div>
 
             <div class="footer-part-layout">
                 <div class="footer-part">
-                    <span>Our company</span>
-                    <div>
-                        <a href="#">How we work</a>
-                        <a href="#">Why Insure?</a>
-                        <a href="#">Check price</a>
-                        <a href="#">Review</a>
-                    </div>
+                    <h2>Our company</h2>
+                    <ul>
+                        <li>
+                            <a href="#">How we work</a>
+                        </li>
+                        <li>
+                            <a href="#">Why Insure?</a>
+                        </li>
+                        <li>
+                            <a href="#">Check price</a>
+                        </li>
+                        <li>
+                            <a href="#">Review</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footer-part">
-                    <span>Help me</span>
-                    <div>
-                        <a href="#">Faq</a>
-                        <a href="#">Terms of use</a>
-                        <a href="#">Privacy policy</a>
-                        <a href="#">Cookies</a>
-                    </div>
+                    <h2>Help me</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Faq</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of use</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Cookies</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footer-part">
-                    <span>Contact</span>
-                    <div>
-                        <a href="#">Sales</a>
-                        <a href="#">Support</a>
-                        <a href="#">Live chat</a>
-                    </div>
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Sales</a>
+                        </li>
+                        <li>
+                            <a href="#">Support</a>
+                        </li>
+                        <li>
+                            <a href="#">Live chat</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footer-part">
-                    <span>Others</span>
-                    <div>
-                        <a href="#">Careers</a>
-                        <a href="#">Press</a>
-                        <a href="#">Licenses</a>
-                    </div>
+                    <h2>Others</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                        <li>
+                            <a href="#">Licenses</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,37 +1,37 @@
 
 .picture-insurance-layout{
-    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
     @media(min-width : 600px){
         padding-left: 10%;
         padding-right: 10%;
         position: relative;
         display: flex;
+        flex-direction: row;
         gap: 1.875rem;
         background-color: var(--dark);
         height: 600px;
     }
+    
 
     svg{
         display: none;
         @media(min-width:600px){
             display: block;
         }
-        /* visibility: hidden; */
-
         width: fit-content;
         fill: white;
         opacity: 0.3;
         position: absolute;
-        /* z-index: -1; */
         right: 5rem;
-        /* padding: 10rem; */
         transform: rotate(-110deg);
         width: 130%;
         height: 80%;
     }
 
-    section.picture{
+    div.picture{
         position: relative;
+        order: 1;
         img{
             width: 100%;
         }
@@ -46,13 +46,14 @@
         }
     }
 
-    section.insurance{
+    div.insurance{
         position: relative;
         background-color: var(--dark);
         color: white;
         display: flex;
         justify-content: center;
         background-size: cover;
+        order: 2;
         svg{
             width: fit-content;
             fill: white;
@@ -103,9 +104,7 @@
                     background-color: white;
                 }
             }
-    
-    
-    
+
             h1{
                 font-family: var(--font-title);
                 line-height: 3rem;
@@ -113,11 +112,13 @@
                 letter-spacing: -0.67px;
                 font-weight: 400;
             }
+
             p{
                 font-size: 1rem;
                 line-height: 1.625rem;
                 font-weight: 400;
             }
+
             a{
                 margin-top: 1rem;
                 padding-left: 2rem;

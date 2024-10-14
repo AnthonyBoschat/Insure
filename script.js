@@ -63,11 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fonction pour animer les propriétés
     const animatePaths = (path) => {
-        let duration = Math.random() * 40 ; // Durée entre 40 et 80
-        let scaleY = Math.random() * (2 - 0.6) + 0.6; // Échelle Y entre 0.6 et 2
-        let scaleX = Math.random() * (2.5 - 1.5) + 1.5; // Échelle X entre 1.5 et 2.5
-        let y = Math.random() * 252 - 250; // Valeur Y entre -250 et 250
-        let rotate = Math.random() * 40 - 20; // Rotation entre -20 et 20 degrés
+        let duration = Math.random() * 40 
+        let y = Math.random() * 252 - 250 
+        let rotate = Math.random() * 40 - 20 
 
         // Animation des propriétés
         path.animate([
@@ -78,12 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
             easing: "ease-in-out",
             iterations: Infinity,
             direction: 'alternate'
-        });
-    };
+        })
+    }
 
     // Appliquer l'animation à chaque chemin
-    paths.forEach(animatePaths);
+    paths.forEach(animatePaths)
 
     // Rendre le SVG visible
-    svg.style.opacity = 0.4;
+    svg.style.opacity = 0.4
 });

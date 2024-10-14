@@ -4,7 +4,6 @@ section.find-more{
     margin-top: 8.75rem;
     padding:4.5rem  1.5rem 4.5rem   1.5rem;
     background-color: var(--dark);
-    /* background: url("../Assets/Backgrounds/findOut\ phone\ background.png"); */
     object-fit: contain;
     display: flex;
     flex-direction: column;

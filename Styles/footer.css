@@ -4,52 +4,60 @@ footer{
     font-family: var(--font-text);
     letter-spacing: 1.5px;
     font-size: 13px;
-    padding-bottom: 5.5rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-image: url("/Assets/Backgrounds/footerBackgroundMobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     @media(min-width:600px){
-        margin-left: 10%;
-        margin-right: 10%;
+        background-image: url("/Assets/Backgrounds/footerBackgroundDesktop.png");
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .footer-layout{
-
-        @media(min-width:600px){
-            div.insure-media{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .insure-media{
+            @media(min-width:600px){
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-    
-                picture{
-                    margin-top: 0;
-                }
-                .media-layout{
+            }
+            picture{
+                margin-top: 5.5rem;
+                display: flex;
+                justify-content: center;
+                @media(min-width:600px){
                     margin-top: 0;
                 }
             }
-        }
 
-        picture{
-            margin-top: 5.5rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        .media-layout{
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-
-            a:hover{
-                svg path{
+            
+            .media-layout{
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                @media(min-width:600px){
+                    margin-top: 0;
+                }
+    
+                path{
+                    fill:#837D88;
+                }
+                a:hover path{
                     fill: var(--darker);
                 }
             }
-            path{
-                fill:#837D88;
-            }
         }
+
 
         .separator{
             height: 1px;
@@ -79,11 +87,15 @@ footer{
                     align-items: flex-start;
                 }
 
-                > span{
+                > h2{
+                    font-size: 13px;
                     color: #837D88;
                 }
 
-                div{
+                ul{
+                    list-style: none;
+                    list-style-type: none;
+                    padding: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -91,7 +103,6 @@ footer{
                         gap: 1rem;
                         align-items: flex-start;
                     }
-
                     a{
                         position: relative;
                         text-decoration: none;
@@ -109,7 +120,6 @@ footer{
                             }
                         }
                     }
-                    
                 }
             }
         }
