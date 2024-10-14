@@ -4,47 +4,6 @@
     flex-direction: column;
     position: relative;
     background-color: var(--dark);
-    @media(min-width : 600px){
-        padding-left: 10%;
-        padding-right: 10%;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        gap: 1.875rem;
-        height: 600px;
-    }
-
-    @media(min-width:600px){
-        &::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-size: auto;
-            background-position-y: -10vh;
-            background-position-x: right;
-            background-repeat: no-repeat;
-            background-image: url("/Assets/Backgrounds/InsuranceBackgroundDesktopRight.png");
-            background-attachment: fixed;
-        }
-        &::before{
-            content: "";
-            position: absolute;
-            z-index: 1000;
-            background-position-y: 200%;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: auto;
-            background-repeat: no-repeat;
-            background-image: url("/Assets/Backgrounds/InsuranceBackgroundDesktopLeft.png");
-            background-attachment: fixed;
-            
-        }
-    }
 
 
     div.picture{
@@ -58,18 +17,6 @@
         img{
             width: 100%;
         }
-        @media(min-width : 600px){
-            max-height: 650px;
-            max-width: 540px;
-            margin-top: 6.5rem;
-            width: 50%;
-            order: 2;
-            
-
-            top: 10vw;
-            display: flex;
-            align-items: flex-end;
-        }
     }
 
     div.insurance{
@@ -79,48 +26,6 @@
         justify-content: center;
         order: 2;
 
-        @media(max-width : 599px){
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-size: auto;
-                background-position: top left;
-                background-position-y: -50%;
-                background-position-x: -50%;
-                margin-bottom: 5rem;
-                background-repeat: no-repeat;
-                background-image: url("/Assets/Backgrounds/insuranceBackgroundMobileLeft.svg");
-                background-attachment: fixed;
-                
-            }
-            &::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-size: auto;
-                background-position: bottom right;
-                /* transform: translateY(37%); */
-                /* background */
-                background-repeat: no-repeat;
-                
-                background-image: url("/Assets/Backgrounds/insuranceBackgroundMobileRight.png");
-                background-attachment: fixed;
-            }
-        }
-        
-        @media(min-width : 600px){
-            display: flex;
-            text-align: start;
-            width: 50%;
-            
-        }
     
         .insurance-layout{
             margin: 6.5rem 1.5rem 6.5rem 1.5rem;
@@ -185,5 +90,98 @@
             }
         }
     
+    }
+
+    @media(max-width : 599px){
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-position: top left;
+            background-position-y: -50%;
+            background-position-x: -50%;
+            margin-bottom: 5rem;
+            background-repeat: no-repeat;
+            background-image: url("/Assets/Backgrounds/insuranceBackgroundMobileLeft.svg");
+            background-attachment: fixed;
+            
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            
+            background-image: url("/Assets/Backgrounds/insuranceBackgroundMobileRight.png");
+            background-attachment: fixed;
+        }
+    }
+
+
+    @media(min-width:600px){
+        position: relative;
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        flex-direction: row;
+        gap: 1.875rem;
+        height: 600px;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-position-y: -10vh;
+            background-position-x: right;
+            background-repeat: no-repeat;
+            background-image: url("/Assets/Backgrounds/InsuranceBackgroundDesktopRight.png");
+            background-attachment: fixed;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            z-index: 1000;
+            background-position-y: 200%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-image: url("/Assets/Backgrounds/InsuranceBackgroundDesktopLeft.png");
+            background-attachment: fixed;
+        }
+
+        div.picture{
+            max-height: 650px;
+            max-width: 540px;
+            margin-top: 6.5rem;
+            width: 50%;
+            order: 2;
+            
+
+            top: 10vw;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        div.insurance{
+            display: flex;
+            text-align: start;
+            width: 50%;
+        }
     }
 }
