@@ -41,7 +41,7 @@ const actionMenu = () => {
                 top: 0,
                 behavior: 'smooth' // Ajoute un effet de défilement en douceur
             });
-            menuButton.innerHTML = buttonIcons.close
+            menuButton.children[0].innerHTML = buttonIcons.close
             phoneMenu.classList.add("animationClass_open")
             phoneMenu.classList.remove("animationClass_closed")
             // A la fin de la durée de l'animation
@@ -52,7 +52,7 @@ const actionMenu = () => {
             
         }
         else if(phoneMenu.classList.contains("animationClass_open")){
-            menuButton.innerHTML = buttonIcons.open
+            menuButton.children[0].innerHTML = buttonIcons.open
             phoneMenu.classList.add("animationClass_close")
             //  A la fin de l'animation
             setTimeout(() => {

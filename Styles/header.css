@@ -9,18 +9,7 @@ header{
     background-color: white;
     gap: 2rem;
 
-    /* Desktop */
-    @media(min-width:600px){
-        margin-left: 10%;
-        margin-right: 10%;
-        padding-right: 0;
-        svg{
-            display: none;
-        }
-        nav{
-            display: flex !important;
-        }
-    }
+    
     
     nav{
         display: none ;
@@ -63,9 +52,40 @@ header{
             }
         }
     }
-    .hamburger{
+    button.hamburger{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border: none;
+        background-color: transparent;
         position: relative;
         z-index: 1002;
+
+        &:hover svg g rect{
+            cursor: pointer;
+            border: none;
+            outline: none;
+            fill: var(--darker);
+            stroke: white;
+        }
+
+        /* &:hover svg{
+            fill: black;
+            cursor: pointer;
+        } */
+    }
+
+    /* Desktop */
+    @media(min-width:600px){
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-right: 0;
+        button.hamburger{
+            display: none;
+        }
+        nav{
+            display: flex !important;
+        }
     }
 
     
