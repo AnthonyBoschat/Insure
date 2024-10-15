@@ -46,7 +46,7 @@ header{
             a{
                 color: #837D88;
 
-                &:hover{
+                &:hover, &:focus{
                     color: var(--darker);
                 }
             }
@@ -57,7 +57,7 @@ header{
             outline: 1.5px solid black;
             transition: all 0.1s linear;
 
-            &:hover{
+            &:hover, &:focus{
                 background-color: var(--darker);
                 color:white;
             }

@@ -30,6 +30,7 @@ section.find-out{
         }
     }
     a{
+        position: relative;
         text-align: center;
         font-family: var(--font-text);
         margin-top: 1rem;
@@ -45,7 +46,8 @@ section.find-out{
         font-weight: 700;
         font-size: 13px;
         transition: all 0.1s linear;
-        &:hover{
+        z-index: 3000;
+        &:hover, &:focus{
             background-color: white;
             color: var(--darker);
         }

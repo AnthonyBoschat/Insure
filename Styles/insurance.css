@@ -83,7 +83,9 @@
                 font-weight: 700;
                 font-size: 13px;
                 transition: all 0.1s linear;
-                &:hover{
+                position: relative;
+                z-index: 3000;
+                &:hover, &:focus{
                     background-color: white;
                     color: var(--darker);
                 }

@@ -41,7 +41,7 @@ footer{
                 path{
                     fill:#837D88;
                 }
-                a:hover path{
+                a:hover path, a:focus path{
                     fill: var(--darker);
                 }
             }
@@ -84,7 +84,7 @@ footer{
                         text-decoration: none;
                         color: var(--dark);
 
-                        &:hover{
+                        &:hover, &:focus{
                             &::after{
                                 position: absolute;
                                 content: "";
