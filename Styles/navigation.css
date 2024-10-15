@@ -4,7 +4,7 @@ nav.phoneMenu{
     height: 100vh;
     width: 100vw;
     background-color: red;
-    z-index: 1001;
+    z-index: 2001;
     
     padding-left: 1.5rem;
     padding-right: 1.5rem;
